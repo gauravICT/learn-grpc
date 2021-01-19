@@ -10,3 +10,5 @@ The function takes a Request message that has two integers, and returns a Respon
 Example:
 
 The client will send two numbers (8 and 22) and the server will respond with (30)
+
+Part-3 - Implementing Server Streaming

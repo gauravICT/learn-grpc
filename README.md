@@ -20,3 +20,5 @@ The function takes a Request message that has one integer, and returns a stream 
 Example:
 
 The client will send one number (120) and the server will respond with a stream of (2,2,2,3,5), because 120=2*2*2*3*5
+
+Part - 5 - Implementing Client Streaming

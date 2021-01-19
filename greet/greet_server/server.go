@@ -5,14 +5,17 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"strconv"
+	"time"
 
-	"github.com/my-projects/learn-grpc/greet/greetpb"
+	"github.com/workspace/learn-grpc/greet/greetpb"
 
 	"google.golang.org/grpc"
 )
 
 type server struct{}
 
+// Greet :
 func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.GreetResponse, error) {
 	fmt.Printf("Greet function invoked: %v\n", req)
 	firstName := req.GetGreeting().GetFirstName()
@@ -23,6 +26,21 @@ func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.G
 		Result: result,
 	}
 	return res, nil
+}
+
+// GreetManyTimes :
+func (*server) GreetManyTimes(req *greetpb.GreetManyTimesRequest, stream greetpb.GreetService_GreetManyTimesServer) error {
+	fmt.Printf("GreetManyTimes function was invoked with %v\n", req)
+	firstName := req.GetGreeting().GetFirstName()
+	for i := 0; i < 10; i++ {
+		result := "Hello " + firstName + " number " + strconv.Itoa(i)
+		res := &greetpb.GreetManyTimesResponse{
+			Result: result,
+		}
+		stream.Send(res)
+		time.Sleep(1000 * time.Millisecond)
+	}
+	return nil
 }
 
 func main() {

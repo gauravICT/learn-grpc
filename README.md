@@ -20,3 +20,13 @@ The function takes a Request message that has one integer, and returns a stream 
 Example:
 
 The client will send one number (120) and the server will respond with a stream of (2,2,2,3,5), because 120=2*2*2*3*5
+
+Part-5 - Implementing Client Streaming
+
+Part-6 - Implementation of a ComputeAverage RPC Client Streaming API in a CalculatorService:
+
+The function takes a stream of Request message that has one integer, and returns a Response with a double that represents the computed average
+
+Example:
+
+The client will send a stream of number (1,2,3,4) and the server will respond with (2.5), because (1+2+3+4)/4 = 2.5 

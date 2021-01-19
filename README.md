@@ -30,3 +30,5 @@ The function takes a stream of Request message that has one integer, and returns
 Example:
 
 The client will send a stream of number (1,2,3,4) and the server will respond with (2.5), because (1+2+3+4)/4 = 2.5 
+
+Part-7 - Implementing BiDi rpc 

@@ -32,3 +32,11 @@ Example:
 The client will send a stream of number (1,2,3,4) and the server will respond with (2.5), because (1+2+3+4)/4 = 2.5 
 
 Part-7 - Implementing BiDi rpc 
+
+Part-8 - Implementation of  a FindMaximum RPC Bi-Directional Streaming API in a CalculatorService:
+
+The function takes a stream of Request message that has one integer, and returns a stream of Responses that represent the current maximum between all these integers
+
+Example:
+
+The client will send a stream of number (1,5,3,6,2,20) and the server will respond with a stream of (1,5,6,20)

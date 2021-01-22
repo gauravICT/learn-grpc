@@ -33,8 +33,6 @@ The client will send a stream of number (1,2,3,4) and the server will respond wi
 
 Part-7 - Implementing BiDi rpc 
 
-Part-8 - Implementing Error Exception in gRPC
-
 Part-8 - Implementation of  a FindMaximum RPC Bi-Directional Streaming API in a CalculatorService:
 
 The function takes a stream of Request message that has one integer, and returns a stream of Responses that represent the current maximum between all these integers
@@ -42,3 +40,7 @@ The function takes a stream of Request message that has one integer, and returns
 Example:
 
 The client will send a stream of number (1,5,3,6,2,20) and the server will respond with a stream of (1,5,6,20)
+
+Part-9 - Implementing Error Exception in gRPC
+
+Part-10 - Implementing Deadlines in RPC calls
